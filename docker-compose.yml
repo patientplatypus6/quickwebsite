@@ -1,0 +1,34 @@
+version: "3.9"
+
+volumes:
+  volume1:
+  data_volume:
+
+services:
+  frontend:
+    build: 
+      context: ./frontend
+    restart: always
+    volumes:
+      - './frontend:/app'
+      - '/app/node_modules'
+    ports: 
+      - "3000:3000"
+  nginx:
+    build:
+      context: ./nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443" 
+    volumes:
+      - volume1:/usr/share/nginx/html
+      # - varwwwcertbot:/var/www/certbot
+      # - certbotconf:/etc/letsencrypt 
+    links:
+      - "frontend"
+  # certbot:
+  #   image: certbot/certbot:latest
+  #   volumes: 
+  #     - varwwwcertbot:/var/www/certbot
+  #     - certbotconf:/etc/letsencrypt
