@@ -69,6 +69,10 @@ services:
       - certbotconf:/etc/letsencrypt 
     networks:
       - main_network
+    depends_on:
+      - 'phx'
+      - 'db'
+      - 'frontend'
   certbot:
     image: certbot/certbot:latest
     volumes: 

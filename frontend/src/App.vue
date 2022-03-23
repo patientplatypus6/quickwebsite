@@ -17,12 +17,31 @@ import HelloWorld from '@/components/HelloWorld.vue'
     </div>
   </header> -->
 
+  <div id='navbar'>
+    <RouterLink to="/"><div class='routerlink'>Home</div></RouterLink>
+    <RouterLink to="/proposal"><div class='routerlink'>Proposal</div></RouterLink>
+    <RouterLink to="/hardware"><div class='routerlink'>Hardware</div></RouterLink>
+  </div>
+
   <RouterView />
   <!-- <HomeView/> -->
 </template>
 
 <style>
 @import '@/assets/base.css';
+
+.navbar{
+  display: inline-block;
+}
+
+.routerlink{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+}
+
 /* 
 #app {
   max-width: 1280px;
@@ -31,6 +50,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
   font-weight: normal;
 }
+
+
 
 header {
   line-height: 1.5;

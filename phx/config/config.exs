@@ -12,7 +12,7 @@ config :my_app,
 
 # Configures the endpoint
 config :my_app, MyAppWeb.Endpoint,
-  url: [host: "127.0.0.1"],
+  url: [host: "0.0.0.0"],
   render_errors: [view: MyAppWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: MyApp.PubSub,
   live_view: [signing_salt: "QkdqkiVm"]
