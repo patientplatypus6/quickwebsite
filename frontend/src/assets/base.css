@@ -69,6 +69,14 @@ body {
     Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
+  background: rgb(2,0,36);
+  background: linear-gradient(156deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,39,166,1) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+a{
+  background: black;
+  color: lightgreen;
+  padding-left: 5px;
+  padding-right: 5px;
 }

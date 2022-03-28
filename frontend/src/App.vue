@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
+//import SelectBlog from '@/components/SelectBlog.vue'
 </script>
 
 <template>
@@ -16,16 +17,52 @@ import HelloWorld from '@/components/HelloWorld.vue'
       </nav>
     </div>
   </header> -->
-
   <div id='navbar'>
     <RouterLink to="/"><div class='routerlink'>Home</div></RouterLink>
-    <RouterLink to="/proposal"><div class='routerlink'>Proposal</div></RouterLink>
-    <RouterLink to="/hardware"><div class='routerlink'>Hardware</div></RouterLink>
+    <div id='selectblog' style='display: inline-block; margin-right: 10px;'>
+      <select name='blogs' id='bolbs' v-model='selected' @change='handleSelectBlog()'>
+       <option disabled value=""> Blogs </option>
+       <option value='proposal'> Proposal </option>
+       <option value='hardware'> Hardware </option>
+      </select>
+    </div>
+<!--    <SelectBlog /> -->
+    <div id='selectnote' style="display: inline-block;">
+      <select name="notes" id="notes" v-model='selected' @change='handleSelectNotes()'>
+        <option disabled value="">Notes</option>
+        <option value="first">First!</option>
+        <option value="ASML">ASML</option>
+      </select>
+    </div>
+
+    <RouterLink to='/personal'><div class='routerlink'>Personal</div></RouterLink>
+    <RouterLink to="/resources"><div class='routerlink'>Resources</div></RouterLink>
+
   </div>
 
   <RouterView />
   <!-- <HomeView/> -->
 </template>
+
+<script scoped>
+  export default{
+    data(){
+      return{
+        selected: ''
+      }
+    },
+    methods: {
+      handleSelectNotes(){
+        this.$router.push('/notes/'+this.selected)
+        this.selected = '';
+      }, 
+      handleSelectBlog(){
+        this.$router.push('/'+this.selected)
+        this.selected = '';
+      }
+    }
+  }
+</script>
 
 <style>
 @import '@/assets/base.css';
@@ -33,6 +70,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
 .navbar{
   display: inline-block;
 }
+
+
 
 .routerlink{
   text-decoration: none;

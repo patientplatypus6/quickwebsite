@@ -1,2 +1,4 @@
 sudo docker exec -it quick_website-nginx-1 /bin/bash
 docker cp media 8e11f02bdd1d:/usr/share/nginx/html/
+docker cp ./media/pics/ 3c02c0e7c1de:/media
+psql -U 'peterweyand' -h localhost 'postgres'
