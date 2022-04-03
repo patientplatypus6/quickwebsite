@@ -1,0 +1,46 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/api/addmessage";
+exports.ids = ["pages/api/addmessage"];
+exports.modules = {
+
+/***/ "(api)/./pages/api/addmessage.js":
+/*!*********************************!*\
+  !*** ./pages/api/addmessage.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ golang)\n/* harmony export */ });\n/* harmony import */ var _utility_utility__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utility/utility */ \"(api)/./utility/utility.js\");\n\nasync function golang(req, res) {\n    console.log(\"value of req.body:\", req.body);\n    console.log(\"value of req.body.message:\", req.body.message);\n    if (req.method == \"POST\") {\n        await (0,_utility_utility__WEBPACK_IMPORTED_MODULE_0__.postData)(\"http://164.92.157.124:8082/message/add\", {\n            message: req.body.message\n        }).then((data)=>{\n            console.log(\"return value from golang: \", data); // JSON data parsed by `data.json()` call\n            res.status(200).json(data);\n        });\n    } else {\n        res.status(200).json({\n            name: \"John Doe\"\n        });\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvYWRkbWVzc2FnZS5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUE4QztBQUUvQixlQUFlQyxNQUFNLENBQUNDLEdBQUcsRUFBRUMsR0FBRyxFQUFFO0lBQzdDQyxPQUFPLENBQUNDLEdBQUcsQ0FBQyxvQkFBb0IsRUFBRUgsR0FBRyxDQUFDSSxJQUFJLENBQUM7SUFDM0NGLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDLDRCQUE0QixFQUFFSCxHQUFHLENBQUNJLElBQUksQ0FBQ0MsT0FBTyxDQUFDO0lBQzNELElBQUdMLEdBQUcsQ0FBQ00sTUFBTSxJQUFFLE1BQU0sRUFBQztRQUNwQixNQUFNUiwwREFBUSxDQUFDLHdDQUF3QyxFQUFFO1lBQUVPLE9BQU8sRUFBRUwsR0FBRyxDQUFDSSxJQUFJLENBQUNDLE9BQU87U0FBQyxDQUFDLENBQ3JGRSxJQUFJLENBQUNDLENBQUFBLElBQUksR0FBSTtZQUNaTixPQUFPLENBQUNDLEdBQUcsQ0FBQyw0QkFBNEIsRUFBRUssSUFBSSxDQUFDLENBQUMsQ0FBQyx5Q0FBeUM7WUFDMUZQLEdBQUcsQ0FBQ1EsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNGLElBQUksQ0FBQztTQUMzQixDQUFDLENBQUM7S0FDSixNQUFJO1FBQ0hQLEdBQUcsQ0FBQ1EsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUM7WUFBRUMsSUFBSSxFQUFFLFVBQVU7U0FBRSxDQUFDO0tBQzNDO0NBQ0YiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcy9hcGkvYWRkbWVzc2FnZS5qcz9iOTI1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7cG9zdERhdGF9IGZyb20gJy4uLy4uL3V0aWxpdHkvdXRpbGl0eSdcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gZ29sYW5nKHJlcSwgcmVzKSB7XG4gIGNvbnNvbGUubG9nKCd2YWx1ZSBvZiByZXEuYm9keTonLCByZXEuYm9keSlcbiAgY29uc29sZS5sb2coJ3ZhbHVlIG9mIHJlcS5ib2R5Lm1lc3NhZ2U6JywgcmVxLmJvZHkubWVzc2FnZSlcbiAgaWYocmVxLm1ldGhvZD09XCJQT1NUXCIpe1xuICAgIGF3YWl0IHBvc3REYXRhKCdodHRwOi8vMTY0LjkyLjE1Ny4xMjQ6ODA4Mi9tZXNzYWdlL2FkZCcsIHsgbWVzc2FnZTogcmVxLmJvZHkubWVzc2FnZX0pXG4gICAgLnRoZW4oZGF0YSA9PiB7XG4gICAgICBjb25zb2xlLmxvZyhcInJldHVybiB2YWx1ZSBmcm9tIGdvbGFuZzogXCIsIGRhdGEpOyAvLyBKU09OIGRhdGEgcGFyc2VkIGJ5IGBkYXRhLmpzb24oKWAgY2FsbFxuICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24oZGF0YSkgICBcbiAgICB9KTtcbiAgfWVsc2V7XG4gICAgcmVzLnN0YXR1cygyMDApLmpzb24oeyBuYW1lOiAnSm9obiBEb2UnIH0pXG4gIH1cbn1cbiJdLCJuYW1lcyI6WyJwb3N0RGF0YSIsImdvbGFuZyIsInJlcSIsInJlcyIsImNvbnNvbGUiLCJsb2ciLCJib2R5IiwibWVzc2FnZSIsIm1ldGhvZCIsInRoZW4iLCJkYXRhIiwic3RhdHVzIiwianNvbiIsIm5hbWUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/addmessage.js\n");
+
+/***/ }),
+
+/***/ "(api)/./utility/utility.js":
+/*!****************************!*\
+  !*** ./utility/utility.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"blogs\": () => (/* binding */ blogs),\n/* harmony export */   \"postData\": () => (/* binding */ postData)\n/* harmony export */ });\nconst blogs = {\n    1: {\n        title: \"Driving Places\",\n        route: \"/blog/drivingplaces\",\n        top: true\n    },\n    2: {\n        title: \"Freedom & Discourse\",\n        route: \"/blog/freedomdiscourse\"\n    },\n    3: {\n        title: \"Remaking The Remade Wheel\",\n        route: \"/blog/remakingremadewheel\"\n    },\n    4: {\n        title: \"Wish You Were Her\",\n        route: \"/blog/wishyouwereher\"\n    },\n    5: {\n        title: \"Weird & Wonderful\",\n        route: \"/blog/weirdwonderful\"\n    }\n};\nasync function postData(url, data) {\n    const response = await fetch(url, {\n        method: \"POST\",\n        cache: \"no-cache\",\n        credentials: \"same-origin\",\n        headers: {\n            \"Content-Type\": \"application/json\"\n        },\n        redirect: \"follow\",\n        referrerPolicy: \"no-referrer\",\n        body: JSON.stringify(data)\n    });\n    return response.json();\n}\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi91dGlsaXR5L3V0aWxpdHkuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFFQSxNQUFNQSxLQUFLLEdBQUc7QUFDVixLQUFDLEVBQUU7UUFDQ0MsS0FBSyxFQUFFLGdCQUFnQjtRQUN2QkMsS0FBSyxFQUFFLHFCQUFxQjtRQUM1QkMsR0FBRyxFQUFFLElBQUk7S0FDWjtBQUNELEtBQUMsRUFBRTtRQUNDRixLQUFLLEVBQUUscUJBQXFCO1FBQzVCQyxLQUFLLEVBQUUsd0JBQXdCO0tBQ2xDO0FBQ0QsS0FBQyxFQUFFO1FBQ0NELEtBQUssRUFBRSwyQkFBMkI7UUFDbENDLEtBQUssRUFBRSwyQkFBMkI7S0FDckM7QUFDRCxLQUFDLEVBQUU7UUFDQ0QsS0FBSyxFQUFFLG1CQUFtQjtRQUMxQkMsS0FBSyxFQUFFLHNCQUFzQjtLQUNoQztBQUNELEtBQUMsRUFBRTtRQUNDRCxLQUFLLEVBQUUsbUJBQW1CO1FBQzFCQyxLQUFLLEVBQUUsc0JBQXNCO0tBQ2hDO0NBQ0o7QUFFRCxlQUFlRSxRQUFRLENBQUNDLEdBQUcsRUFBRUMsSUFBSSxFQUFDO0lBQ2hDLE1BQU1DLFFBQVEsR0FBRyxNQUFNQyxLQUFLLENBQUNILEdBQUcsRUFBRTtRQUNoQ0ksTUFBTSxFQUFFLE1BQU07UUFDZEMsS0FBSyxFQUFFLFVBQVU7UUFDakJDLFdBQVcsRUFBRSxhQUFhO1FBQzFCQyxPQUFPLEVBQUU7WUFDUCxjQUFjLEVBQUUsa0JBQWtCO1NBRW5DO1FBQ0RDLFFBQVEsRUFBRSxRQUFRO1FBQ2xCQyxjQUFjLEVBQUUsYUFBYTtRQUM3QkMsSUFBSSxFQUFFQyxJQUFJLENBQUNDLFNBQVMsQ0FBQ1gsSUFBSSxDQUFDO0tBQzNCLENBQUM7SUFDRixPQUFPQyxRQUFRLENBQUNXLElBQUksRUFBRSxDQUFDO0NBQ3hCO0FBRXVCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vdXRpbGl0eS91dGlsaXR5LmpzP2NjZDQiXSwic291cmNlc0NvbnRlbnQiOlsiXG5cbmNvbnN0IGJsb2dzID0ge1xuICAgIDE6IHtcbiAgICAgICAgdGl0bGU6ICdEcml2aW5nIFBsYWNlcycsXG4gICAgICAgIHJvdXRlOiAnL2Jsb2cvZHJpdmluZ3BsYWNlcycsXG4gICAgICAgIHRvcDogdHJ1ZVxuICAgIH0sXG4gICAgMjoge1xuICAgICAgICB0aXRsZTogJ0ZyZWVkb20gJiBEaXNjb3Vyc2UnLCBcbiAgICAgICAgcm91dGU6ICcvYmxvZy9mcmVlZG9tZGlzY291cnNlJywgXG4gICAgfSxcbiAgICAzOiB7XG4gICAgICAgIHRpdGxlOiAnUmVtYWtpbmcgVGhlIFJlbWFkZSBXaGVlbCcsIFxuICAgICAgICByb3V0ZTogJy9ibG9nL3JlbWFraW5ncmVtYWRld2hlZWwnLCBcbiAgICB9LFxuICAgIDQ6IHtcbiAgICAgICAgdGl0bGU6ICdXaXNoIFlvdSBXZXJlIEhlcicsIFxuICAgICAgICByb3V0ZTogJy9ibG9nL3dpc2h5b3V3ZXJlaGVyJywgXG4gICAgfSxcbiAgICA1OiB7XG4gICAgICAgIHRpdGxlOiAnV2VpcmQgJiBXb25kZXJmdWwnLCBcbiAgICAgICAgcm91dGU6ICcvYmxvZy93ZWlyZHdvbmRlcmZ1bCcsIFxuICAgIH1cbn1cblxuYXN5bmMgZnVuY3Rpb24gcG9zdERhdGEodXJsLCBkYXRhKXtcbiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaCh1cmwsIHtcbiAgICBtZXRob2Q6ICdQT1NUJywgLy8gKkdFVCwgUE9TVCwgUFVULCBERUxFVEUsIGV0Y1xuICAgIGNhY2hlOiAnbm8tY2FjaGUnLCAvLyAqZGVmYXVsdCwgbm8tY2FjaGUsIHJlbG9hZCwgZm9yY2UtY2FjaGUsIG9ubHktaWYtY2FjaGVkXG4gICAgY3JlZGVudGlhbHM6ICdzYW1lLW9yaWdpbicsIC8vIGluY2x1ZGUsICpzYW1lLW9yaWdpbiwgb21pdFxuICAgIGhlYWRlcnM6IHtcbiAgICAgICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbidcbiAgICAgIC8vICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkJyxcbiAgICB9LFxuICAgIHJlZGlyZWN0OiAnZm9sbG93JywgLy8gbWFudWFsLCAqZm9sbG93LCBlcnJvclxuICAgIHJlZmVycmVyUG9saWN5OiAnbm8tcmVmZXJyZXInLCAvLyBuby1yZWZlcnJlciwgKm5vLXJlZmVycmVyLXdoZW4tZG93bmdyYWRlLCBvcmlnaW4sIG9yaWdpbi13aGVuLWNyb3NzLW9yaWdpbiwgc2FtZS1vcmlnaW4sIHN0cmljdC1vcmlnaW4sIHN0cmljdC1vcmlnaW4td2hlbi1jcm9zcy1vcmlnaW4sIHVuc2FmZS11cmxcbiAgICBib2R5OiBKU09OLnN0cmluZ2lmeShkYXRhKVxuICB9KTtcbiAgcmV0dXJuIHJlc3BvbnNlLmpzb24oKTtcbn1cblxuZXhwb3J0IHtibG9ncywgcG9zdERhdGF9XG4iXSwibmFtZXMiOlsiYmxvZ3MiLCJ0aXRsZSIsInJvdXRlIiwidG9wIiwicG9zdERhdGEiLCJ1cmwiLCJkYXRhIiwicmVzcG9uc2UiLCJmZXRjaCIsIm1ldGhvZCIsImNhY2hlIiwiY3JlZGVudGlhbHMiLCJoZWFkZXJzIiwicmVkaXJlY3QiLCJyZWZlcnJlclBvbGljeSIsImJvZHkiLCJKU09OIiwic3RyaW5naWZ5IiwianNvbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./utility/utility.js\n");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../../webpack-api-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/addmessage.js"));
+module.exports = __webpack_exports__;
+
+})();

@@ -10,14 +10,14 @@ volumes:
   data_volume:
 
 services:
-  phx: 
+  go: 
     build:
-      context: ./phx
+      context: ./golang/server
     restart: always
-    volumes:
-      - ./phx:/phx
+    volumes: 
+      - ./go:/go
     ports: 
-      - "4000:4000"
+      - "8081:8081"
     depends_on:
       db:
         condition: service_healthy
@@ -43,19 +43,18 @@ services:
       retries: 20
     networks:
       - main_network
-  frontend:
-    build: 
-      context: ./frontend
+  blog: 
+    build:
+      context: ./blog/serversidenext
     restart: always
     volumes:
-      - './frontend:/app'
-      - '/app/node_modules'
+      - './blog/serversidenext:/app'
     ports: 
-      - "3000:3000"
+      - "3001:3001"
     networks:
       - main_network
     depends_on:
-      - "phx"
+      - "db"
   nginx:
     build:
       context: ./nginx
@@ -70,9 +69,9 @@ services:
     networks:
       - main_network
     depends_on:
-      - 'phx'
       - 'db'
-      - 'frontend'
+      - 'go'
+      - 'blog'
   certbot:
     image: certbot/certbot:latest
     volumes: 
