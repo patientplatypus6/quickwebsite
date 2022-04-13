@@ -11,6 +11,8 @@ import PageList from '../../components/pagelist'
 
 import Head from 'next/head'
 import Weirdwonderful from '../../blogs/weirdwonderful'
+import Ownwebsite from '../../blogs/ownwebsite'
+import Thendenver from '../../blogs/thendenver'
 
 const Blog = () => {
   const router = useRouter()
@@ -47,8 +49,11 @@ const Blog = () => {
       return <Wishyouwereher/>
     }else if(blogpost=='weirdwonderful'){
       return <Weirdwonderful/>
+    }else if(blogpost=='ownwebsite'){
+      return <Ownwebsite/>
+    }else if(blogpost=='thendenver'){
+      return <Thendenver/>
     }
-
   }
 
   return (

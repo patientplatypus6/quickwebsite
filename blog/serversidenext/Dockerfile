@@ -16,6 +16,12 @@
 #COPY .next /usr/src/app
 #CMD npm run build && npm run start
 
+
+
+
+
+
+
 FROM node:alpine
 
 #copy source
@@ -28,7 +34,7 @@ COPY . .
 # Build 
 #RUN npm run build
 
-ENTRYPOINT [ "npm", "run", "start" ]
+ENTRYPOINT [ "npm", "run", "dev" ]
 
 
 

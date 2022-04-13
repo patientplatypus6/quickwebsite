@@ -37,5 +37,5 @@ func main() {
         routes.Getmessages(w, r)
     })
 
-    log.Fatal(http.ListenAndServe(":8082", nil))
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }

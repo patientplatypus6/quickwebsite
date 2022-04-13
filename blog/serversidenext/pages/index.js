@@ -16,7 +16,7 @@ export default function Home(){
     <div>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Press+Start+2P&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet"/>
       </Head>
       <div className={styles.headercontainer} style={{width: '100vw'}}>

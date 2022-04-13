@@ -15,10 +15,10 @@ const MessageHandler = ({msgprops}) => {
   },[inputval]) 
 
   useEffect(()=>{
-    console.log('value of msgprops', JSON.stringify(msgprops.messages))
+    console.log('value of msgprops', JSON.stringify(msgprops))
     //console.log('value of msgprops.messages', JSON.stringify(msgprops.msgprops.msgprops.messages))
-    setMsgs(msgprops.messages)
-  }, [])
+    setMsgs(msgprops)
+  }, [msgprops])
  
  // useEffect(()=>{ 
  //   getData('http://164.92.157.124:3002/api/getmessages')
@@ -31,7 +31,7 @@ const MessageHandler = ({msgprops}) => {
 
   const handleEnter = () => {
     console.log("if you are seeing this message it's because this is a work in progress")
-    postData('http://164.92.157.124:3002/api/addmessage', { message: inputval})
+    postData('https://lightchan.org/api/addmessage', { message: inputval})
      .then(data => {
       console.log("inside messagewall and data:", data); // JSON data parsed by `data.json()` call
       setMsgs(data.messages)
@@ -74,7 +74,31 @@ const MessageHandler = ({msgprops}) => {
   )
 }
 
-export default function Messagewall({msgprops}){
+
+//function useForceUpdate(){
+//    const [value, setValue] = useState(0); // integer state
+//    return () => setValue(value => value + 1); // update the state to force render
+//}
+
+export default function Messagewall(){
+  const [msgprops, setMsgprops] = useState([])
+  const [value, setValue] = useState(0)
+  useEffect(()=>{
+    //var await getData('http://lightchan.org/api/getmessages')
+   getData('https://lightchan.org/api/getmessages')
+   .then(data => {
+    console.log("inside messagewall MAIN and data:", data.messages); // JSON data parsed by `data.json()` call
+    setMsgprops(data.messages)
+    console.log('value of msgprops after setting in main: ', msgprops)
+   });
+  }, [])
+  useEffect(()=>{
+    console.log('msgprops has updated and new value', msgprops)
+    var newvalue = value + 1
+    setValue(newvalue)
+    console.log('value of value: ', value)
+    console.log('state should have updated')
+  }, [msgprops])
   return(
     <div>
       <Head>
@@ -90,7 +114,8 @@ export default function Messagewall({msgprops}){
       </div>
       <div className={styles.pagecontentcontainer}>
         This is the message wall
-	<MessageHandler msgprops={msgprops}/>
+	{msgprops!=[]?
+	  <MessageHandler msgprops={msgprops}/>:<div/>}
       </div>
       <div className={styles.listcontainerright}>
         <PageList/>
@@ -101,12 +126,14 @@ export default function Messagewall({msgprops}){
 
 
 
-export async function getStaticProps(){
-  const msgprops = await getData('http://164.92.157.124:3002/api/getmessages')
-  console.log('value of msgs from getData: ', msgprops)
-  return{
-    props: {
-      msgprops
-    }
-  }
-}
+//export async function getStaticProps(){
+//  var msgprops = {}
+//  msgprops = await getData('http://lightchan.org/api/getmessages')
+//  console.log('value of msgs from getData: ', msgprops)
+//  const msgprops = await getData('http://lightchan.org/go/messages/get')
+//  return{
+//    props: {
+//      msgprops
+//    }
+//  }
+//}

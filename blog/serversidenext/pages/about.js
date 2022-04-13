@@ -40,7 +40,23 @@ export const AboutContainer = () => {
       <hr/>
       <div style={{float: 'left', paddingRight: '5px', width: 'calc(100% - 10px)'}}>
         <p>
-          I spent many years exploring. Here are a couple of my favorite pictures from my travels. 
+	  Here are some recent pictures of a train ride I took to the top of Pikes peak. 
+	</p>
+	<div style={{display: 'flex'}}>
+	  <div style={{flex: 20}}>
+            <Image src="/about/pikes1.jpeg" alt="" title="" width="100%" height="100%" layout="responsive" objectFit="fill"/>
+          </div>
+          <div style={{flex: 1}}/>
+          <div style={{flex: 20}}>
+            <Image src="/about/pikes2.jpeg" alt="" title="" width="100%" height="100%" layout="responsive" objectFit="fill"/>
+          </div>
+          <div style={{flex: 1}}/>
+          <div style={{flex: 20}}>
+            <Image src="/about/pikes3.jpeg" alt="" title="" width="100%" height="100%" layout="responsive" objectFit="fill"/>
+          </div>
+	</div>
+	<p>
+          I also spent many years exploring. Here are a couple of my favorite pictures from my travels. 
         </p>
         <div style={{display: 'flex'}}>
           <div style={{flex: 20}}>

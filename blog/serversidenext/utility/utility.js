@@ -1,24 +1,32 @@
 
 
 const blogs = {
+    0: {
+        title: "And Then There Was Denver", 
+	route: '/blog/thendenver', 
+	top: true
+    },
     1: {
-        title: 'Driving Places',
-        route: '/blog/drivingplaces',
-        top: true
+        title: 'My Own Website',
+	route: '/blog/ownwebsite'
     },
     2: {
+        title: 'Driving Places',
+        route: '/blog/drivingplaces'
+    },
+    3: {
         title: 'Freedom & Discourse', 
         route: '/blog/freedomdiscourse', 
     },
-    3: {
+    4: {
         title: 'Remaking The Remade Wheel', 
         route: '/blog/remakingremadewheel', 
     },
-    4: {
+    5: {
         title: 'Wish You Were Her', 
         route: '/blog/wishyouwereher', 
     },
-    5: {
+    6: {
         title: 'Weird & Wonderful', 
         route: '/blog/weirdwonderful', 
     }

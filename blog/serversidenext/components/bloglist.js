@@ -9,6 +9,7 @@ export default function BlogList(){
   console.log('value of router.asPath: ', router.asPath)
 
   const handleRoute = (e) => {
+    console.log('value of e: ', e);
     router.push(e)
   }
 
